@@ -1,6 +1,6 @@
 {
-  "name": "scaffolder",
-  "version": "1.0.0",
+  "name": "scaffolded",
+  "version": "0.0.1",
   "description": "package for prompting the user and template and copy files",
   "main": "index.js",
   "scripts": {

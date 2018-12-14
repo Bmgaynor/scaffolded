@@ -10,7 +10,7 @@ const { promisify } = require('util')
 const readFile = promisify(fs.readFile)
 const writeFile = promisify(fs.writeFile)
 
-const templateDir = path.join(__dirname, './')
+const templateDir = path.dirname(module.parent.filename)
 
 process.on('unhandledRejection', error => {
   console.error(error)
@@ -41,6 +41,7 @@ const writeTemplate = async (inputFile, properties) => {
     imports: { _ },
     properties
   }))
+  console.log(`finished writing: ${inputFile}`)
 }
 
 const generateFiles = async (properties, globPattern) => {
@@ -55,5 +56,4 @@ const go = async (prompts) => {
   return answers
 }
 
-
-module.exports = go 
+module.exports = go
