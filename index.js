@@ -49,10 +49,10 @@ const generateFiles = async (properties, globPattern) => {
   return Promise.all(templateFiles.map(item => writeTemplate(item, properties)))
 }
 
-const go = async (prompts) => {
+const go = async (prompts, folders = ['templates/**/*']) => {
   const answers = await inquirer.prompt(prompts)
 
-  await generateFiles(answers, ['templates/**/*'])
+  await generateFiles(answers, folders)
   return answers
 }
 
