@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Bradey Gaynor",
+  "author": "Bradley Gaynor <bradmgaynor@gmail.com> (http://bradgaynor.com)",
   "license": "ISC",
   "dependencies": {
     "globby": "^8.0.1",
